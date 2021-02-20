@@ -8,5 +8,8 @@ public class Person {
   private HashMap moneyOwed;
   private HashMap moneyCollect;
 
+  public Person(String firstName, String lastName) {
+
+  }
 
 }
