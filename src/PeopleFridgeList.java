@@ -18,9 +18,12 @@ public class PeopleFridgeList extends ItemList {
     moneySpent = 0.0;
   }
 
-  // returns the given Person's items
-  public ItemList returnPersonItems() {
-
+  /**
+   * Returns the items in this List
+   * @param person
+   * @return
+   */
+  public ItemList returnPersonItems(People person) {
+    return person;
   }
-
 }

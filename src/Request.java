@@ -27,6 +27,13 @@ public class Request {
         this.status = update;
     }
 
+    void acceptRequest() {
+        this.status = Status.ACCEPTED;
+    }
+
+    void rejectRequest() {
+        this.status = Status.REJECTED;
+    }
     /**
      * The status of the request.
      */

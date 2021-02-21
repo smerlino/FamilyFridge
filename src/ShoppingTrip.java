@@ -7,6 +7,7 @@ import java.util.ArrayList;
 public class ShoppingTrip {
     private ArrayList<Person> people;
     private ArrayList<RequestList> requestList;
+    private ArrayList<Request> acceptedRequests;
     private boolean isEnd;
     private String store;
 
@@ -19,9 +20,14 @@ public class ShoppingTrip {
      */
     public ShoppingTrip(ArrayList<Person> people, String store) {
         this.people = people;
-        this.requestList = new RequestList();
+        this.requestList = new ArrayList<RequestList>();
+        this.acceptedRequests = new ArrayList<Request>();
         this.isEnd = false;
         this.store = store;
+    }
+
+    void addRequest(Request request) {
+        this.acceptedRequests.add(request);
     }
 
     /**
@@ -31,7 +37,21 @@ public class ShoppingTrip {
      *
      */
     void addRequests(RequestList requestList) {
-        this.requestList.add(requestList);
+        if (!isEnd) {
+            this.requestList.add(requestList);
+        }
+    }
+
+    void withdrawRequestList(RequestList list) {
+        if (requestList.contains(list)) {
+            requestList.remove(list);
+        }
+        for (Request request: list.getRequests()) {
+            if (acceptedRequests.contains(request)) {
+                acceptedRequests.remove(request);
+            }
+        }
+        // maybe error handling instead
     }
 
     /**

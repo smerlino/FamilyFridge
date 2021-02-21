@@ -21,9 +21,18 @@ public class RequestList extends ItemList {
         this.requests = requests;
     }
 
+    /**
+     * Returns the list of requests.
+     * @return list of requests
+     */
     public ArrayList<Request> getRequests() {
         return new ArrayList<Request>(requests);
     }
+
+    /**
+     * Adds a new request to the current list of requests.
+     * @param newRequest represents request to be added
+     */
     public void addRequest(Request newRequest) {
         this.requests.add(newRequest);
     }

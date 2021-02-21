@@ -13,7 +13,7 @@ public class Person {
   /**
    * Initializes a Person given a name, where {@param isShopping} is false
    *
-   * @param name    represents the name of the Person
+   * @param name represents the name of the Person
    */
   public Person(String name) {
     this.name = name;
@@ -34,7 +34,7 @@ public class Person {
    * Updates whether Person is or is not shopping. If Person was shopping, updates to false.
    * If Person was not shopping, updates to true.
    */
-  public void updateIsShopping() {
+  void updateIsShopping() {
     isShopping = !isShopping;
   }
 
@@ -45,7 +45,7 @@ public class Person {
    * @param person represents who money is owed to
    * @param payment represents amount of money owed
    */
-  public void addOwed(Person person, double payment) {
+  void addOwed(Person person, double payment) {
     updateMap(person, payment, this.moneyOwed);
   }
 
@@ -56,7 +56,7 @@ public class Person {
    * @param person represents who owes money
    * @param payment represents amount of money owed
    */
-  public void addCollect(Person person, double payment) {
+  void addCollect(Person person, double payment) {
     updateMap(person, payment, this.moneyCollect);
   }
 

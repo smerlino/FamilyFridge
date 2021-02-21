@@ -8,6 +8,25 @@ public class Item {
     private double price;
     private int quantity;
     private boolean isInFridge;
+    private boolean isPurchased;
+
+    public Item(People owner, String name) {
+        this.owner = owner;
+        this.name = name;
+        this.description = "";
+        this.price = 0.0;
+        this.quantity = 1;
+        this.isInFridge = false;
+    }
+
+    public Item(People owner, String name, String description, double price, int quantity) {
+        this.owner = owner;
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.quantity = quantity;
+        this.isInFridge = false;
+    }
 
     /**
      * Initializes an Item with the given parameters
@@ -63,7 +82,6 @@ public class Item {
     void markPurchased() {
         this.isInFridge = true;
     }
-
 
     /**
      * Returns the value of this Item's {@param name}
