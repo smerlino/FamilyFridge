@@ -63,6 +63,7 @@ public class Person {
   /**
    * Helper method to update the hashmaps contained within this class based on whether or not a key
    * value already exists. Will update a Person
+   *
    * @param person represents Person key value
    * @param payment represents payment value
    * @param map represents which hashmap to update

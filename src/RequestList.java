@@ -37,5 +37,19 @@ public class RequestList extends ItemList {
         this.requests.add(newRequest);
     }
 
+    /**
+     * Removes the given {Request} from the current list of requests if it exists
+     *
+     * @param newRequest                    represents request to be removed
+     * @throws IllegalArgumentException     if newRequest is not in this.requests     */
+    public void removeRequest(Request newRequest) {
+        if (this.requests.contains(newRequest)) {
+            this.requests.add(newRequest);
+        }
+        else {
+            throw new IllegalArgumentException("Request is not in List!");
+        }
+    }
+
 
 }

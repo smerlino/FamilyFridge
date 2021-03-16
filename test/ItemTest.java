@@ -1,6 +1,7 @@
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import static org.junit.Assert.assertEquals;
 
@@ -8,11 +9,11 @@ import static org.junit.Assert.assertEquals;
  * Contains test for {@link Item} constructors and methods
  */
 public class ItemTest {
-    Person parson1 = new Person("Sarah Lackey");
-    People people1 = new People(new ArrayList<>(person1));
+    Person person1 = new Person("Sarah Lackey");
+    People people1 = new People(new ArrayList<Person>(Arrays.asList(person1)));
 
     Item item1 = new Item(people1, "Pesto", "she left so much pesto when she left", 7.50, 12, true);
-    Item item2 = new Item(people1, "Mozzerella Cheese", "delicious", 5.00, 1, false);
+    Item item2 = new Item(people1, "Mozzarella Cheese", "delicious", 5.00, 1, false);
 
     /**
      * Test get functions

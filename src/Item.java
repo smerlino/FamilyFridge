@@ -85,6 +85,8 @@ public class Item {
 
     /**
      * Returns the value of this Item's {@param name}
+     *
+     * @return current Item {@param name}
      */
     String getName() {
         return this.name;
@@ -92,6 +94,8 @@ public class Item {
 
     /**
      * Return the value of this Item's {@param description}
+     *
+     * @return current Item {@param description}
      */
     String getDescription() {
         return this.description;
@@ -99,6 +103,8 @@ public class Item {
 
     /**
      * Returns the value of the {@param price} of this Item
+     *
+     * @return current Item {@param price}
      */
     double getPrice() {
         return this.price;
@@ -106,6 +112,8 @@ public class Item {
 
     /**
      * Returns the value of the {@param quantity} of this Item that is in the Fridge
+     *
+     * @return current Item {@param quantity}
      */
     int getQuantity() {
         return this.quantity;
@@ -113,6 +121,8 @@ public class Item {
 
     /**
      * Returns value of this Item's {@param isInFridge}
+     *
+     * @return current Item {@param isInFridge}
      */
     boolean getIsInFridge() {
         return this.isInFridge;
